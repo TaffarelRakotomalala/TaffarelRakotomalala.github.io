@@ -1,0 +1,90 @@
+{% extends 'blog/main.html'%}
+{% load static %}
+{% block 'table1' %}
+    <h3 style="text-align: center;">T-shirt Manandriana</h3>
+    <table style="width:100%" class="table table-dark table-striped">
+        <tr>
+            <th>Couleur/Taille</th>
+            <th> S </th>
+            <th>M</th>
+            <th>L</th>
+            <th>XL</th>
+            <th>XXL</th>
+            <th>Autre</th>
+        </tr>
+        <tr>
+            <th>Rouge</th>
+            <td>{{s1r1}}</td>
+            <td>{{m1r1}}</td>
+            <td>{{l1r1}}</td>
+            <td>{{xl1r1}}</td>
+            <td>{{xxl1r1}}</td>
+            <td>{{autre1r1}}</td>
+        </tr>
+        <tr>
+            <th>Blanc</th>
+            <td>{{s1b1}}</td>
+            <td>{{m1b1}}</td>
+            <td>{{l1b1}}</td>
+            <td>{{xl1b1}}</td>
+            <td>{{xxl1b1}}</td>
+            <td>{{autre1b1}}</td>
+        </tr>
+        <tr>
+            <th>Jaune</th>
+            <td>{{s1j1}}</td>
+            <td>{{m1j1}}</td>
+            <td>{{l1j1}}</td>
+            <td>{{xl1j1}}</td>
+            <td>{{xxl1j1}}</td>
+            <td>{{autre1j1}}</td>
+        </tr>
+    </table>
+    <!-- <table style="width:100%" class="table table-dark table-striped">
+        <tr>
+            <th></th>
+            <th>Avance</th>
+            <th>Reste</th>
+        </tr>
+        <tr>
+            <th>Somme d'argents</th>
+            <td>{{avance1}}</td>
+            <td>{{reste1}}</td>
+        </tr>
+    </table> -->
+{% endblock%}
+{% block 'table2'%}
+<h3 style="text-align: center;">T-shirt FITEMAFI</h3>
+    <table style="width:100%" class="table table-dark table-striped">
+        <tr>
+            <th>Taille</th>
+            <th>S</th>
+            <th>M</th>
+            <th>L</th>
+            <th>XL</th>
+            <th>XXL</th>
+            <th>Autre</th>
+        </tr>
+        <tr>
+            <th>Nombres</th>
+            <td>{{s2}}</td>
+            <td>{{m2}}</td>
+            <td>{{l2}}</td>
+            <td>{{xl2}}</td>
+            <td>{{xxl2}}</td>
+            <td>{{autre2}}</td>
+        </tr>
+    </table>
+    <!-- <table style="width:100%" class="table table-dark table-striped">
+        <tr>
+            <th></th>
+            <th>Avance</th>
+            <th>Reste</th>
+        </tr>
+        <tr>
+            <th>Somme d'argents</th>
+            <td>{{avance2}}</td>
+            <td>{{reste2}}</td>
+        </tr>
+    </table> -->
+{% endblock %}

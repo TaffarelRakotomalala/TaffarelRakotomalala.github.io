@@ -1,0 +1,63 @@
+{% extends 'blog/main.html' %}
+{% load static %}
+{% block 'table1' %}
+<table class="table table-dark table-striped" style="margin-left: 5%;">
+    <h3 style="text-align: center;">T-shirt 1</h3>
+    <thead>
+        <tr>
+            <th>id_anarana</th>
+            <th>Loko</th>
+            <th>Halehibehiny</th>
+            <th>Fanamarihana</th>
+            <th>Isa</th>
+            <th>Vola_lasa</th>
+            <th>Vola_sisa</th>
+            <th>Vita_loa?</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in commande1 %}
+        <tr>
+            <td>{{i.id_client1}}</td>
+            <td>{{i.couleur1}}</td>
+            <td>{{i.taille}}</td>
+            <td>{{i.comment}}</td>
+            <td>{{i.nombre}}</td>
+            <td>{{i.avance}}</td>
+            <td>{{i.reste}}</td>
+            <td>{{i.payement}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% block 'table2' %}
+<table class="table table-dark table-striped" style="margin-left: 5%;">
+    <h3 style="text-align: center;">T-shirt 2</h3>
+    <thead>
+        <tr>
+            <th>id_anarana</th>
+            <th>Halehibehiny</th>
+            <th>Fanamarihana</th>
+            <th>Isa</th>
+            <th>Vola_lasa</th>
+            <th>Vola_sisa</th>
+            <th>Vita_loa?</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in commande2 %}
+        <tr>
+            <td>{{i.id_client2}}</td>
+            <td>{{i.taille}}</td>
+            <td>{{i.comment}}</td>
+            <td>{{i.nombre}}</td>
+            <td>{{i.avance}}</td>
+            <td>{{i.reste}}</td>
+            <td>{{i.payement}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

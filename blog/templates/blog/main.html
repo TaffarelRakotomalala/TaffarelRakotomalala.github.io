@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    {% block 'head' %}
+    <head>
+        <title>Accueil</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    </head>
+    {% endblock %}
+    <body>
+        <div class="container" id="div1">
+            <div class="container" style="margin-left: 8%;">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <!-- Brand -->
+                    <img src="{% static 'images/FAC.PNG' %}" class="rounded-circle" id="image1">
+                  
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../accueil/">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../infocommande">InfoCommande</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../admin/blog/">Enregister</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Modifier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../info">Informations</a>
+                        </li>
+                    </ul>
+                </nav>
+                <br>
+            </div>
+            <div class="row" style="margin-left: 12%;">
+                <div class="col">
+                    {% block 'table1' %}
+                    <h3 style="text-align: center;">T-shirt 1</h3>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Anarana</th>
+                                <th>Fanampiny</th>
+                                <th>Contact</th>
+                                <th>Toerana</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in client1 %}
+                            <tr>
+                                <td>{{i.id}}</td>
+                                <td>{{i.nom1}}</td>
+                                <td>{{i.prenom1}}</td>
+                                <td>{{i.contact1}}</td>
+                                <td>{{i.domicile1}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endblock %}
+                </div>
+                <div class="col">
+                    {% block 'table2' %}
+                    <h3 style="text-align: center;">T-shirt 2</h3>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Anarana</th>
+                                <th>Fanampiny</th>
+                                <th>Contact</th>
+                                <th>Toerana</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for j in client2 %}
+                            <tr>
+                                <td>{{j.id}}</td>
+                                <td>{{j.nom2}}</td>
+                                <td>{{j.prenom2}}</td>
+                                <td>{{j.contact2}}</td>
+                                <td>{{j.domicile2}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
